@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from fastai.basic_train import load_learner
+from fastai.vision.all import *
 from fastai.vision import open_image
 from flask_cors import CORS, cross_origin
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app, support_credentials=True)
 
 # load the learner
-learn = load_learner(path="./models", file="trained_model.pkl")
+learn = load_learner("./models/trained_model.pkl")
 lyrics_gen = load_learner(path="./models", file="final_lyric_gen.pkl")
 classes = learn.data.classes
 
