@@ -7,7 +7,7 @@ CORS(app, support_credentials=True)
 
 # load the learner
 learn = load_learner("./models/trained_model.pkl")
-lyrics_gen = load_learner(path="./models", file="final_lyric_gen.pkl")
+lyrics_gen = load_learner("./modelsfinal_lyric_gen.pkl")
 classes = learn.data.classes
 
 
