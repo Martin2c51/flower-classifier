@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from fastai.vision.all import 
+from fastai.vision.all import *
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
